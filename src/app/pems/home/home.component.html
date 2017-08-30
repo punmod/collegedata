@@ -1,0 +1,64 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Stream Wise Data</div>
+  <div class="panel-body">
+
+<div class="table-responsive">
+<table class="table table-bordered">
+  
+  <thead>
+      
+    <tr>
+    
+     <td><b>Stream</b></td>
+      <td><b>No of Male Students</b></td>
+      <td><b>No of Female Students</b></td>
+      <td><b>No of SC Students</b></td>
+      <td><b>No of ST Students</b></td>
+      <td><b>Number UT Students</b></td>
+      <td><b>No of Outside-UT Students</b></td>
+      <td> ACTION </td>
+    </tr>
+  </thead>
+   
+  <tbody>
+      
+    
+       <tr  *ngFor="let course of courses">
+         
+          
+        <td>{{course.stream}}</td>
+        <td>{{course.male}}</td>
+        <td>{{course.female}}</td>
+        <td>{{course.sc}}</td>
+         <td>{{course.st}}</td>
+        <td>{{course.ut}}</td>
+        <td>{{course.outsideut}}</td>
+        
+        <td> 
+           <!-- <a class="btn btn-info" routerLink="/show/{{employee._id}}">Detail</a> --> 
+            <a class="btn btn-success" routerLink="/edit/{{course.aid}}">Edit</a>
+          
+        </td>
+          
+
+     </tr>
+     
+     
+     
+  </tbody>
+ 
+</table>
+
+  
+
+</div>
+
+ <papp-navbar></papp-navbar>
+   
+
+
+      
+     
+   
+  </div>  
+</div>
