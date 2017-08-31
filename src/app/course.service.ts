@@ -24,7 +24,7 @@ export class CourseService {
       .map(()=>"");
   }
   getCourse(aid){
-    return this._http.post("http://misrusachd.in/api/courseapi/selectone.php/",{'aid':aid,})
+    return this._http.post("http://misrusachd.in/api/courseapi/selectone.php/",{'aid':aid})
       .map(res=>res.json());
   }
   deleteCourse(id){
