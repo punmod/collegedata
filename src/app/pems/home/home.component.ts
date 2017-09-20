@@ -1,6 +1,4 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { ProjService } from '../../proj.service';
-import { Project } from '../../project';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -23,7 +21,7 @@ export class PHomeComponent implements OnInit {
    ) {
      
   }
-  courses:any;
+  courses:any={};
   count:any;
   ngOnInit() {
    this.getCourses(); 
@@ -33,8 +31,7 @@ export class PHomeComponent implements OnInit {
  
  uid:any;
   getCourses(){
-      this.uid = this.route.snapshot.params['uid'];
-     this._courseService
+       this._courseService
         .getCourses()
         .subscribe(employ => {
           this.courses = employ;

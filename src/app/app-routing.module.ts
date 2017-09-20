@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:"", redirectTo:"/home", pathMatch:"full"},
   {path:"home", component:PHomeComponent},
   
-  {path:"add", component:PAddComponent},
+    {path:"add", component:PAddComponent},
   {path:"edit/:aid", component:PEditComponent},
   
   

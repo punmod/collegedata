@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjService } from '../../proj.service';
-import { Project } from '../../project';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import { CourseService } from '../../course.service';
 import { Course } from '../../course';
@@ -21,7 +19,7 @@ constructor(
   ngOnInit() {
   }
 
-model = new Course();
+model:any={};
  uid = this.route.snapshot.params['uid'];
   addCourse(){
       this.courseService

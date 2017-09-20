@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import { ProjService } from '../../proj.service';
-import { Project } from '../../project';
 import { CourseService } from '../../course.service';
 import { Course } from '../../course';
 
@@ -23,22 +21,22 @@ export class PEditComponent implements OnInit {
       this.getSingleCourse();
   }
 
-  //model:any={};
-  model = new Project();
+  model:any={};
+  //model = new Project();
   aid = this.route.snapshot.params['aid'];
    getSingleCourse(){
     
     this.courseService
       .getCourse(this.aid)
-      .subscribe(course =>{
-          this.model = course[0];
+      .subscribe(course1 =>{
+          this.model = course1[0];
           })
   };
   
   updateCourse(){
       this.courseService
         .updateCourse(this.model)
-        .subscribe(()=> this.goBack());
+       .subscribe(()=> this.goBack());
   }
  
    goBack(){
